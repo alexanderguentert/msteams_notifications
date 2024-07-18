@@ -5,6 +5,22 @@ on:
   release: {}
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Repository auschecken
+      uses: actions/checkout@v4
+
+    - name: Python einrichten
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'  # Hier die gewünschte Python-Version angeben
+
+    - name: Abhängigkeiten installieren
+      run: pip install -r requirements.txt
+
+
   success:
     name: One with everything
     runs-on: ubuntu-latest
