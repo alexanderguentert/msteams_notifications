@@ -18,7 +18,9 @@ jobs:
         python-version: '3.x'  # Hier die gewünschte Python-Version angeben
 
     - name: Abhängigkeiten installieren
-      run: pip install -r requirements.txt
+      run: |
+        pip install -r requirements.txt
+        python hello.py
 
 
   success:
