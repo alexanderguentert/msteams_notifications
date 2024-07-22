@@ -16,6 +16,7 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.x'  # Hier die gewünschte Python-Version angeben
+        # cache: 'pip' # macht nur Sinn, wenn man fixe Versionen verwendet
 
     - name: Abhängigkeiten installieren
       run: |
