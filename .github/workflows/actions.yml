@@ -31,6 +31,6 @@ jobs:
         needs: ${{ toJson(needs) }}
         job: ${{ toJson(job) }}
         steps: ${{ toJson(steps) }}
-        overwrite: "{title: `Fehler bei: ${workflow_link}`}"
+        overwrite: "{title: `Fehler bei: ${workflow_link} oder https://github.com/opendatazurich/opendatazurich.github.io/actions/runs/${github.run_id}?check_suite_focus=true`}"
         dry_run: False
 
