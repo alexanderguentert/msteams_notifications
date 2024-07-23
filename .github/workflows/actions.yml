@@ -31,6 +31,6 @@ jobs:
         needs: ${{ toJson(needs) }}
         job: ${{ toJson(job) }}
         steps: ${{ toJson(steps) }}
-        overwrite: "{text: `Fehler bei: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}`}"
+        overwrite: "{text: `Fehler bei Commit ${{github.event.workflow_run.head_commit.message}} ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}`}"
         dry_run: False
 
